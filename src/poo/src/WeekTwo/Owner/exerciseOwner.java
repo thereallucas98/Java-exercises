@@ -1,4 +1,4 @@
-package WeekTwo;
+package WeekTwo.Owner;
 
 public class exerciseOwner {
 
