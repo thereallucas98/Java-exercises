@@ -18,10 +18,11 @@ public class mainCar {
 		int numberPortsCar = 0;
 		int yearCar = 0;
 		int solarRoofCar = 0;
+		int totalGear = 0;
 		
 		
 		Random random = new Random();
-		car newCar = new car("", "", "", "", "", 0, 0, 0, 0, false, false, false, 0.0);
+		car newCar = new car("", "", "", "", "", 200, 0, 0, 0, false, false, false, 0.0);
 		
 		// GENERATING CHASSI
 		 
@@ -42,7 +43,7 @@ public class mainCar {
 		// 
 		
 		manualGearOption = Integer.parseInt(JOptionPane.showInputDialog("1. Cambio automático\n2. Cambio Manual"));
-		
+		solarRoofCar = Integer.parseInt(JOptionPane.showInputDialog("1. Teto solar\n2. Teto normal"));
 		
 		newCar.setName(ownerName);
 		newCar.setModel(carModel);
@@ -53,8 +54,20 @@ public class mainCar {
 		
 		if (manualGearOption == 1) {
 			numberGearsCar = "PND";
+			newCar.setManualGear(true);
 		} else if(manualGearOption == 2) {
 			numberGearsCar = JOptionPane.showInputDialog("Informe a quantidade de marchas");
+			newCar.setManualGear(false);
+		} else {
+			System.out.println("Opção Inválida");
+		}
+		
+		if (solarRoofCar == 1) {
+			newCar.setSolarRoof(true);
+		} else if (solarRoofCar == 2) {
+			newCar.setSolarRoof(false);
+		} else {
+			System.out.println("Opção Inválida");
 		}
 		
 		newCar.setGears(numberGearsCar);
@@ -62,6 +75,43 @@ public class mainCar {
 		
 		System.out.println(newCar);
 		System.out.println(newCar.getNumberGears());
+		
+		if (newCar.getSolarRoof() == true) {
+			System.out.println("Possui teto solar");
+		} else if (newCar.getSolarRoof() == false) {
+			System.out.println("Não possui teto solar");
+		}
+		
+		
+		while(menuOption != 0) {
+			int optionToBeChosen = Integer.parseInt(JOptionPane.showInputDialog(newCar.getModel() + "\nQuais ações deseja fazer?"
+					+ "\n1. Desligar/Ligar Carro"
+					+ "\n2. Acelerar (+1KM/h)"
+					+ "\n3. Parar o carro (0KM/h)"
+					+ "\n4. Aumentar marcha"
+					+ "\n5. Reduzir marcha"
+					+ "\n6. Visualizar Painel"
+					+ "\n0. Sair"));
+			
+			
+			switch(optionToBeChosen) {
+			case 1:
+				newCar.setStatus();
+				break;
+			case 2:
+				newCar.setSpeed();
+				break;
+			case 3:
+				newCar.setSpeedZero();
+				break;
+			case 4:
+				String aux = newCar.getNumberGears();
+				char[] arrayGear = aux.toCharArray();
+				totalGear = arrayGear.length;
+				
+				System.out.println(totalGear);
+			}
+		}
 		
 		
 	}

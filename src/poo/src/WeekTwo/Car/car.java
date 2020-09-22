@@ -125,6 +125,29 @@ public class car {
 		this.numberPorts = newNumberPorts;
 	}
 	
+	public void setSpeed() {
+		if (this.nowSpeed < 200) {
+			this.nowSpeed += 1;
+		}
+	}
+	
+	public void setSpeedZero() {
+		this.nowSpeed = 0;
+	}
+	
+	
+	public void setSolarRoof(boolean newSolarRoof) {
+		this.solarRoof = (this.solarRoof) ? (false) :  (true);
+	}
+	
+	public void setManualGear(boolean newGear) {
+		this.manualGear = (this.manualGear) ? (false) :  (true);
+	}
+	
+	public void setStatus() {
+		this.carStatus = (this.carStatus) ? (false) :  (true);
+	}
+	
 	
 	// this.status = (this.status) ? (false) : (true);
 	
