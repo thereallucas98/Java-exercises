@@ -2,12 +2,12 @@ package listaRevisao;
 
 import javax.swing.JOptionPane;
 
-import listaRevisao.exerciseOneTV;
+import listaRevisao.ExerciseOneTV;
 
-public class exerciseOne {
+public class ExerciseOne {
 	public static void main(String[] args) {
 		int menuOption = 1;
-		exerciseOneTV newTV = new exerciseOneTV(false, 0, 0);
+		ExerciseOneTV newTV = new ExerciseOneTV(false, 0, 0);
 		
 
 		while(menuOption != 0) {

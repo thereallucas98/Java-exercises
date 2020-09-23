@@ -1,6 +1,6 @@
 package WeekTwo.Car;
 
-public class car {
+public class Car {
 
 	private String model;
 	private String color;
@@ -19,7 +19,7 @@ public class car {
 	
 	// CONSTRUCTOR
 	
-	public car(String model, String color, String chassi, String ownerCar , int maxGear, int numberGears,
+	public Car(String model, String color, String chassi, String ownerCar , int maxGear, int numberGears,
 			int maxSpeed, int year, int nowSpeed, int numberPorts,
 			boolean solarRoof, boolean manualGear, boolean carStatus,
 			Double fuelAmount) {

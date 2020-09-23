@@ -3,7 +3,7 @@ package listaRevisao;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
-public class exerciseThree {
+public class ExerciseThree {
 	public static void main(String[] args) {
 
 		int menuOption = 1;
@@ -11,7 +11,7 @@ public class exerciseThree {
 		Random rand = new Random();
 		double randomFuelStart = rand.nextInt(60);
 
-		exerciseThreeTruck newTruck = new exerciseThreeTruck(false, randomFuelStart, 0);
+		ExerciseThreeTruck newTruck = new ExerciseThreeTruck(false, randomFuelStart, 0);
 		
 		System.out.println(newTruck.getFuel());
 		

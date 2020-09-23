@@ -1,20 +1,20 @@
 package listaRevisao;
 
-public class exerciseOneTV {
+public class ExerciseOneTV {
 	private boolean status = false;
 	private int channel;
 	private int volume = 50;
 	
 	// CONSTRUCTOR
 	
-	public exerciseOneTV(boolean status, int channel, int volume) {
+	public ExerciseOneTV(boolean status, int channel, int volume) {
 		this.status = status;
 		this.channel = channel;
 		this.volume = volume;
 	}
 	
 	
-	// METODS
+	// METHODS
 	
 	// GET
 	
@@ -33,10 +33,7 @@ public class exerciseOneTV {
 	// SET 
 	
 	public void setStatus() {
-		 if (this.status == false)
-			this.status = true;
-		else
-			this.status = false;
+		 this.status = (this.status) ? (false) : (true);
 	}
 	
 	public void setChannel(int newChannel) {

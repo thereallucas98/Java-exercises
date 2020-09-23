@@ -1,16 +1,16 @@
 package WeekTwo.Owner;
 
-public class exerciseOwner {
+public class ExerciseOwner {
 
 	private String name;
 	private String cpf;
 	private String rg;
 	private String birth;
-	private exerciseOwnerAddress address;
+	private ExerciseOwnerAddress address;
 	
 	// CONSTRUCTOR
 	
-	public exerciseOwner(String name, String cpf, String rg, String birth, exerciseOwnerAddress address) {
+	public ExerciseOwner(String name, String cpf, String rg, String birth, ExerciseOwnerAddress address) {
 		this.name = name;
 		this.cpf = cpf;
 		this.rg = rg;
@@ -37,7 +37,7 @@ public class exerciseOwner {
 		return this.birth;
 	}
 	
-	public exerciseOwnerAddress getAddress() {
+	public ExerciseOwnerAddress getAddress() {
 		return this.address;
 	}
 	// SET
@@ -58,7 +58,7 @@ public class exerciseOwner {
 		this.birth = newBirth;
 	}
 	
-	public void setAddress(exerciseOwnerAddress newAddress) {
+	public void setAddress(ExerciseOwnerAddress newAddress) {
 		this.address = newAddress;
 	}
 	

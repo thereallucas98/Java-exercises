@@ -1,13 +1,13 @@
 package listaRevisao;
 
-public class exerciseThreeTruck {
+public class ExerciseThreeTruck {
 	private boolean status = false;
 	private double fuel = 0;
 	private int speed = 0;
 
 	// CONSTRUTOR
 
-	public exerciseThreeTruck(boolean status, double fuel, int speed) {
+	public ExerciseThreeTruck(boolean status, double fuel, int speed) {
 		this.status = status;
 		this.fuel = fuel;
 		this.speed = speed;

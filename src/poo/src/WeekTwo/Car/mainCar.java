@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class mainCar {
+public class MainCar {
 	public static void main(String[] args) {
 		String letras = "ABCDEFGHIJKLMNOPQRSTUVYWXZ0123456789";
 		String chassi = "";
@@ -21,7 +21,7 @@ public class mainCar {
 		int totalGear = 0;
 
 		Random random = new Random();
-		car newCar = new car("", "", "", "", 0, 0, 200, 0, 0, 0, false, false, false, 0.0);
+		Car newCar = new Car("", "", "", "", 0, 0, 200, 0, 0, 0, false, false, false, 0.0);
 
 		// GENERATING CHASSI
 

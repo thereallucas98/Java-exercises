@@ -1,6 +1,6 @@
 package WeekTwo.Owner;
 
-public class exerciseOwnerAddress {
+public class ExerciseOwnerAddress {
 
 	private String street;
 	private int number;
@@ -11,7 +11,7 @@ public class exerciseOwnerAddress {
 	
 	// CONSTRUCTOR
 	
-	public exerciseOwnerAddress(String street, int number, String neigh, String city, String state, String code) {
+	public ExerciseOwnerAddress(String street, int number, String neigh, String city, String state, String code) {
 		this.street = street;
 		this.number = number;
 		this.neighbor = neigh;
