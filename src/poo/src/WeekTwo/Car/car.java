@@ -6,7 +6,8 @@ public class car {
 	private String color;
 	private String chassi;
 	private String ownerCar;
-	private String numberGears;
+	private int maxGear;
+	private int numberGears = 0;
 	private int maxSpeed;
 	private int year;
 	private int nowSpeed;
@@ -18,7 +19,7 @@ public class car {
 	
 	// CONSTRUCTOR
 	
-	public car(String model, String color, String chassi, String ownerCar , String numberGears,
+	public car(String model, String color, String chassi, String ownerCar , int maxGear, int numberGears,
 			int maxSpeed, int year, int nowSpeed, int numberPorts,
 			boolean solarRoof, boolean manualGear, boolean carStatus,
 			Double fuelAmount) {
@@ -31,6 +32,7 @@ public class car {
 		this.nowSpeed = nowSpeed;
 		this.numberPorts = numberPorts;
 		this.numberGears = numberGears;
+		this.maxGear = maxGear;
 		this.carStatus = carStatus;
 		this.solarRoof = solarRoof;
 		this.manualGear = manualGear;
@@ -57,7 +59,11 @@ public class car {
 		return this.ownerCar;
 	}
 	
-	public String getNumberGears() {
+	public int getMaxGear() {
+		return this.maxGear;
+	}
+	
+	public int getNumberGears() {
 		return this.numberGears;
 	}
 	
@@ -78,8 +84,12 @@ public class car {
 	}
 
 	
-	public boolean getSolarRoof() {
-		return this.solarRoof;
+	public String getSolarRoof() {
+		if (this.solarRoof == true) {
+			return String.format("Possui teto Solar");
+		} else {
+			return String.format("Não possui teto Solar");
+		}
 	}
 	
 	public boolean getManualGear() {
@@ -113,8 +123,28 @@ public class car {
 		this.ownerCar = newOwner;
 	}
 	
-	public void setGears(String newGear) {
-		this.numberGears = newGear;
+	public void setGears(int newGear) {
+		this.maxGear = newGear;
+	}
+	
+	public void setGearUp() {
+		if (this.maxGear == 3) {
+			this.numberGears = 3;
+		} else {
+			if (this.numberGears < this.maxGear) {
+				this.numberGears += 1;
+			}
+		}
+	}
+	
+	public void setGearDown() {
+		if (this.maxGear == 3) {
+			this.numberGears -= 1;
+		} else {
+			if (this.numberGears > 0) {
+				this.numberGears -= 1;
+			}
+		}
 	}
 	
 	public void setYear(int newYear) {
@@ -137,15 +167,27 @@ public class car {
 	
 	
 	public void setSolarRoof(boolean newSolarRoof) {
-		this.solarRoof = (this.solarRoof) ? (false) :  (true);
+		if (this.solarRoof == false) {
+			this.solarRoof = newSolarRoof;
+		} else {
+			this.solarRoof = newSolarRoof;
+		}
 	}
 	
 	public void setManualGear(boolean newGear) {
-		this.manualGear = (this.manualGear) ? (false) :  (true);
+		if (this.manualGear == false) {
+			this.manualGear = newGear;
+		} else {
+			this.manualGear = newGear;
+		}
 	}
 	
 	public void setStatus() {
-		this.carStatus = (this.carStatus) ? (false) :  (true);
+		if (this.carStatus == false) {
+			this.carStatus = true;
+		} else {
+			this.carStatus = false;
+		}
 	}
 	
 	
