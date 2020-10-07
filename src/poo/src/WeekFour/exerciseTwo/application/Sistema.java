@@ -5,12 +5,9 @@ import WeekFour.exerciseTwo.entities.Pedido;
 public class Sistema {
 
 	public static void main(String[] args) {
-		Pedido p1 = new Pedido(null);
-		
-		p1.addItem(123, 4, (float) 14.50, "Arroz");
+		Pedido p1 = new Pedido();
+		p1.addItem(1, 3, 10, "Arroz");
 		
 		System.out.println(p1.getTotal());
-		
-		System.out.println(p1.getItem());
 	}
 }

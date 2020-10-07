@@ -1,31 +1,30 @@
 package WeekFour.exerciseTwo.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pedido {
 	
 	private float total;
-	private ItemPedido item;
+	private List<ItemPedido> itens = new ArrayList();
 	
-	public Pedido(ItemPedido item) {
-		this.item = item;
-	}
 	
 	// METHODS
 	
 	// GET
 	public Float getTotal() {
-		return this.total;
-	}
-	
-	public ItemPedido getItem() {
-		return this.item;
+		for (ItemPedido item: itens) {
+			total += item.getQuantidade() * item.produto().getValor();
+		}
+		
+		return total;
 	}
 		
 	// SET
 	public void addItem(int codigo, int quantidade, float valor, String descricao) {
 		var produto = new Produto(codigo, (float) valor, descricao);
-		this.item = new ItemPedido(quantidade, produto);
+		this.itens.add(new ItemPedido(quantidade, produto));
 		
-		total += valor * quantidade;
 	}
 		
 	// TOSTRING
