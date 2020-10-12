@@ -3,7 +3,7 @@ ________
 
 <h2 align="center"> 📷 Screenshot do projeto: </h2>
 <p align="center">
-<img width="1020" height="720" src="java-calculador.png">
+<img width="1020" height="720" src="./java-calculador.png">
 </p>
 
 _________
