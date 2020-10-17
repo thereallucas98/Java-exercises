@@ -3,7 +3,7 @@ ________
 
 <h2 align="center"> 📷 Sistema de Vendas </h2>
 <p align="center">
-<img width="1020" height="720" src="./sistemadevendas.png">
+<img width="600" height="900" src="./sistemadevendas.png">
 </p>
 
 _________
