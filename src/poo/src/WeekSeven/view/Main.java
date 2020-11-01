@@ -112,7 +112,7 @@ public class Main {
 				
 				
 				if (result == null) {
-					System.out.println("ID não cadastrado");
+					System.out.println("ID não cadastrado, menu será exibido!");
 				} else {
 					System.out.println(result);
 				}

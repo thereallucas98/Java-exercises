@@ -30,9 +30,11 @@ public class Counter extends Employee {
 	// TOSTRING()
 	public String toString() {
 		if (this.isContabil == true) {
-			return String.format("NOME: %s - Nº de Inscrição do CC: %s, logo é contador(a).", getName(), this.accountingBoard);
+			return String.format("\nDADOS DO FUNCIONÁRIO: "
+					+ "\nNOME: %s - Nº de Inscrição do CC: %s, logo é contador(a).", getName(), this.accountingBoard);
 		} else {
-			return String.format("NOME: %s - ainda não é membro do Conselho.", getName());
+			return String.format("\nDADOS DO FUNCIONÁRIO: "
+					+ "\nNOME: %s - ainda não é membro do Conselho.", getName());
 		}
 	}
 	

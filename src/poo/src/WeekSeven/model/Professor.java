@@ -38,9 +38,11 @@ public class Professor extends Employee {
 	// TOSTRING()
 	public String toString() {
 		if (this.isTeaching == true) {
-			return String.format("NOME: %s - HORAS/AULA: %.1f e no momento está lecionando", getName(), this.hoursTeaching);
+			return String.format("\nDADOS DO FUNCIONÁRIO: "
+					+ "NOME: %s - HORAS/AULA: %.1f e no momento está lecionando", getName(), this.hoursTeaching);
 		} else {
-			return String.format("NOME: %s - MATRICULA: %s e no momento não está lecionando", getName(), getIdEmployee());
+			return String.format("\nDADOS DO FUNCIONÁRIO: "
+					+ "\nNOME: %s - MATRICULA: %s e no momento não está lecionando", getName(), getIdEmployee());
 		}
 	}
 }

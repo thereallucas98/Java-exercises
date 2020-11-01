@@ -38,6 +38,7 @@ public class Coordinator extends Professor {
 	
 	// TOSTRING()
 	public String toString() {
-		return String.format("NOME: %s - DATA DE NASCIMENTO: %s", getName(), getBirth());
+		return String.format("\nDADOS DO COORDENADOR\nNOME: %s - DATA DE NASCIMENTO: %s"
+				+ "\nFUNÇÃO: %s", getName(), getBirth(), this.office);
 	}
 }
