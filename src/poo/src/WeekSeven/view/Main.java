@@ -19,11 +19,9 @@ public class Main {
 		HashMap<String, Employee> Employees = new HashMap<String, Employee>();
 		
 		int optionMenu = 1;
-		Random rand = new Random();
 		
-		int randomId = rand.nextInt(10000000);
 		
-		System.out.println(randomId);
+		// System.out.println(randomId);
 		
 		while(optionMenu != 0) {
 			int optionToBeChosen = Integer.parseInt(JOptionPane.showInputDialog("Cadastro de Funcionário"
@@ -35,6 +33,10 @@ public class Main {
 			
 			switch(optionToBeChosen) {
 			case 1:
+				Random rand = new Random();
+				
+				int randomId = rand.nextInt(10000000);
+				
 				String newName = JOptionPane.showInputDialog("Informe o nome do(a) funcionário(a)");
 				String newId = Integer.toString(randomId);
 				String newBirth = JOptionPane.showInputDialog("Informe a data de nascimento: dd/mm/aaaa");
@@ -104,8 +106,22 @@ public class Main {
 			case 2: 
 				String searchId = JOptionPane.showInputDialog("Informe o ID");
 				
-				System.out.println(Employees.get(searchId));
+				Object result = Employees.get(searchId);
+				
+//				System.out.println(result);
+				
+				
+				if (result == null) {
+					System.out.println("ID não cadastrado");
+				} else {
+					System.out.println(result);
+				}
 				break;
+			case 3:
+				String searchIdRemove = JOptionPane.showInputDialog("Informe o ID que deseja"
+						+ " remover");
+				
+				Employees.remove(searchIdRemove);
 			case 4:
 				for(@SuppressWarnings("rawtypes") Map.Entry emp : Employees.entrySet()) {
 					System.out.println(emp.getValue());

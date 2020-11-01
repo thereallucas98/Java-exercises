@@ -38,6 +38,6 @@ public class Coordinator extends Professor {
 	
 	// TOSTRING()
 	public String toString() {
-		return String.format("NOME: %s", getName());
+		return String.format("NOME: %s - DATA DE NASCIMENTO: %s", getName(), getBirth());
 	}
 }
